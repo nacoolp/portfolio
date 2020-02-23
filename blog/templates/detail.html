@@ -2,13 +2,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% load static %}
+      {% load static %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
-    <title>Nakul's first Django project</title>
+    <title>{{ blog.title }}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -37,6 +37,14 @@
         user-select: none;
       }
 
+      .rotateimg90 {
+          -webkit-transform:rotate(90deg);
+          -moz-transform: rotate(90deg);
+          -ms-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+          transform: rotate(90deg);
+    }
+
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
@@ -47,7 +55,7 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Nakul Pitolwala</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Nakul Pitolwala</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -60,7 +68,7 @@
             <a class="nav-link" href="{% static '/resume.pdf' %}">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'allblogs' %}">Blog</a>
+            <a class="nav-link active" href="{% url 'allblogs' %}">Blog</a>
           </li>
 
         </ul>
@@ -69,43 +77,20 @@
 </header>
 
 <main role="main">
-
-  <section class="jumbotron text-center">
+    <h1 class="text-center">{{ blog.title }}</h1>
     <div class="container">
-      <h1>Hi, I am Nakul!!</h1>
-      <p class="lead text-muted">Chupchap apna kaam karo</p>
-      <p>
-        <a href="mailto:nakul.pitolwala@gmail.com" class="btn btn-primary my-2">Email</a>
-      </p>
-    </div>
-  </section>
-<!-- <p align="center"><img src="{{ image }}"/></p> -->
-  <p align="center"><img src="{% static '/nakul.jpg' %}"/>></p>
-  <div class="album py-5 bg-light">
-
-    <div class="container">
-      <div class="row">
-          {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{ job.image.url }}"/>
-            <div class="card-body">
-              <p class="card-text">{{ job.summary }}</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
+        <div>
+            <div>
+            <p class="text-center">{{ blog.pub_date }}</p>
             </div>
-          </div>
+            <div>
+            <p class="text-center pt-6"><img class="image-fluid" src="{{ blog.image.url }}" height="180"/></p>
+            </div>
+                <br/>
+            <p class="pt-6">{{ blog.body }}</p>
+            <hr/>
         </div>
-        {% endfor %}
-      </div>
     </div>
-  </div>
-
 </main>
 
 <footer class="text-muted">
