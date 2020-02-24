@@ -47,14 +47,14 @@
   <body>
     <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Nakul Pitolwala</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Nakul Pitolwala</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
 
-            <a class="nav-link" href="#">Twitter</a>
+            <a class="nav-link" href="https://www.linkedin.com/in/nakulpitolwala">LinkedIn</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% static '/resume.pdf' %}">Resume</a>
@@ -73,14 +73,14 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1>Hi, I am Nakul!!</h1>
-      <p class="lead text-muted">Chupchap apna kaam karo</p>
+      <p class="lead text-muted">MTech (Control & Automation)</p>
       <p>
         <a href="mailto:nakul.pitolwala@gmail.com" class="btn btn-primary my-2">Email</a>
       </p>
     </div>
   </section>
 <!-- <p align="center"><img src="{{ image }}"/></p> -->
-  <p align="center"><img src="{% static '/nakul.jpg' %}"/>></p>
+  <p align="center"><img src="{% static '/nakul.jpg' %}" height="500"/>></p>
   <div class="album py-5 bg-light">
 
     <div class="container">
