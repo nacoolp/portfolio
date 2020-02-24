@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/blog/templates/allblogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/allblogs.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jobs/templates/jobs/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/jobs/templates/jobs/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/portfolio/static/nakul.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/portfolio/static/nakul.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
